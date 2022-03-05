@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MAERSK</title>
+
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            padding: 10px;
+        }
+
+        .grid-item {
+            background-color: #EFEFEF;
+            padding: 20px;
+            font-size: 30px;
+            text-align: center;
+        }
+
+        .title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        body {
+            padding: 50px;
+        }
+
+        .myCard {
+            display: flex;
+            flex-flow: row wrap;
+        }
+
+        .myCard>div {
+            background-color: #f1f1f1;
+            text-align: center;
+            line-height: 5px;
+            font-size: 30px;
+        }
+
+        .sideDiv {
+            position: absolute;
+            top: 195px;
+            right: 325px;
+        }
+
+        .sortBtn {
+            background-color: #72C3DC;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            text-align: center;
+            width: 94px;
+            cursor: pointer;
+        }
+
+        .btn-div {
+            padding: 15px;
+        }
+
+        .card-title {
+            color: white;
+            font-size: 48px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="title">Shuffle and Sort</h1>
+
+    <div class="grid-container">
+        <div class="myCard grid-item">
+        </div>
+        <div class="grid-item">
+            <div class="btn-div">
+                <button class="sortBtn" onclick="sortCards()">Sort</button>
+            </div>
+            <div>
+                <button class="sortBtn" onclick="shuffleCards()">Shuffle</button>
+            </div>
+        </div>
+    </div>
+    <div class="grid-container">
+        Shuffle and Sort By Pandappa Talawar
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
