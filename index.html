@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>MAERSK</title>
 
     <style>
@@ -26,12 +26,17 @@
         }
 
         body {
-            padding: 50px;
+            padding: 10px;
         }
 
         .myCard {
             display: flex;
             flex-flow: row wrap;
+
+            @media only screen and (min-width : 480px) {
+                position: relative !important;
+                top: 170px !important;
+            }
         }
 
         .myCard>div {
@@ -39,12 +44,6 @@
             text-align: center;
             line-height: 5px;
             font-size: 30px;
-        }
-
-        .sideDiv {
-            position: absolute;
-            top: 195px;
-            right: 325px;
         }
 
         .sortBtn {
@@ -69,20 +68,50 @@
             color: white;
             font-size: 48px;
         }
+
+
+        @media only screen and (min-width : 320px) and (max-width : 720px) {
+            .mob-show-btn {
+                display: flex;
+                flex-flow: row;
+                position: absolute;
+                top: 76px;
+                width: 70%;
+                background-color: white
+            }
+
+            .mob-grid-box {
+                position: relative;
+                top: 50px;
+            }
+
+            .mg-btn {
+                margin-top: 15px;
+            }
+
+            .mg-btn-div {
+                margin-left: 25px;
+            }
+
+            .mob-title {
+                color: #ffffff;
+                background-color: #000000;
+            }
+        }
     </style>
 </head>
 
 <body>
-    <h1 class="title">Shuffle and Sort</h1>
+    <h1 class="title mob-title">Shuffle and Sort</h1>
 
     <div class="grid-container">
-        <div class="myCard grid-item">
+        <div class="myCard grid-item mob-grid-box">
         </div>
-        <div class="grid-item">
-            <div class="btn-div">
+        <div class="grid-item mob-show-btn">
+            <div class="btn-div mg-btn-div">
                 <button class="sortBtn" onclick="sortCards()">Sort</button>
             </div>
-            <div>
+            <div class="mg-btn">
                 <button class="sortBtn" onclick="shuffleCards()">Shuffle</button>
             </div>
         </div>
